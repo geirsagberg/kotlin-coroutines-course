@@ -18,7 +18,7 @@ public class Work {
         requestReport()
           .thenCompose(report -> sendEmail(report))
           .thenCompose(_ -> orderPizza())
-          .thenAccept(pizza -> eatPizza())
+          .thenAccept(pizza -> eatPizza(pizza))
           .thenRun(() -> relax());
     }
 }

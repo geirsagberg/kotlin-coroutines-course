@@ -14,7 +14,7 @@
 | Error Handling           | OS-level error handling (e.g., segmentation fault) | Application-level error handling                    |
 
 **DEMO:**
-- [10000 threads](../src/main/java/no/vegvesen/vt/nvdb/MemoryThreads.kt)
+- [10000 threads](../src/main/java/no/vegvesen/vt/nvdb/MemoryThreads.java)
 - [10000 coroutines](../src/main/java/no/vegvesen/vt/nvdb/MemoryCoroutines.kt)
 
 [Neste](03-concurrency-java-threads.md)
