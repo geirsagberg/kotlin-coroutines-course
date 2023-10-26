@@ -30,7 +30,6 @@ fun brushTeeth() {
     println("Brushing teeth")
 }
 
-
 suspend fun main() {
     morningRoutine()
 }

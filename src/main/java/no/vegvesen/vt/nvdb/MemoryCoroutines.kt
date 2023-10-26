@@ -1,12 +1,15 @@
 package no.vegvesen.vt.nvdb
 
-import kotlinx.coroutines.*
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.joinAll
+import kotlinx.coroutines.launch
 
-suspend fun main() {
+suspend fun main() = coroutineScope {
     (1..10000).map {
-        GlobalScope.launch {
+        launch {
             delay(1000)
             println("Hello from coroutine $it")
         }
-    }.map { it.join() }
+    }.joinAll()
 }
