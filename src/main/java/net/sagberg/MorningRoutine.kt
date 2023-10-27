@@ -14,11 +14,13 @@ suspend fun main() {
 
 suspend fun morningRoutine() = coroutineScope {
     val coffeeBrewing = async {
+        println("Brewing coffee...")
         delay(3.seconds)
-        println("Coffee is ready")
+        println("Coffee is ready!")
         Coffee
     }
     val catPeeing = async {
+        println("Letting the cat out...")
         delay(Math.random() * 6.seconds)
         println("Meow! *scratch* *scratch*")
     }

@@ -15,8 +15,9 @@ suspend fun morningRoutine() {
 
     // 1. Inline declaration
     suspend {
+        println("Brewing coffee...")
         delay(3000) {
-            println("Coffee is ready")
+            println("Coffee is ready!")
             coffeeBrewing.complete(Coffee)
         }
     }.startCoroutine(Continuation(context) {})
@@ -47,6 +48,7 @@ class CompletableDeferred<T> {
 }
 
 fun catPeeingCoroutine(result: CompletableDeferred<Unit>): suspend () -> Unit = {
+    println("Letting the cat out...")
     delay((Math.random() * 6000).toLong()) {
         println("Meow! *scratch* *scratch*")
         result.complete(Unit)
