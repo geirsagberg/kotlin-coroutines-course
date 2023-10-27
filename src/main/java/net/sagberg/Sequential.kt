@@ -1,13 +1,10 @@
 package net.sagberg
 
 import kotlinx.coroutines.delay
-import kotlinx.coroutines.runBlocking
 import kotlin.time.Duration.Companion.seconds
 
-fun main() {
-    runBlocking {
-        work()
-    }
+suspend fun main() {
+    work()
 }
 
 suspend fun work() {

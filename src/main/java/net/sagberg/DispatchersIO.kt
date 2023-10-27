@@ -2,10 +2,8 @@ package net.sagberg
 
 import kotlinx.coroutines.*
 
-fun main() {
-    runBlocking {
-        fetchSomeData()
-    }
+suspend fun main() {
+    fetchSomeData()
 }
 
 @OptIn(ExperimentalCoroutinesApi::class)

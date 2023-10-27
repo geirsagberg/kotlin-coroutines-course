@@ -8,6 +8,10 @@ import kotlin.time.times
 
 data object Coffee
 
+suspend fun main() {
+    morningRoutine()
+}
+
 suspend fun morningRoutine() = coroutineScope {
     val coffeeBrewing = async {
         delay(3.seconds)
@@ -30,8 +34,4 @@ fun startWorkingDay(coffee: Coffee) {
 
 fun brushTeeth() {
     println("Brushing teeth")
-}
-
-suspend fun main() {
-    morningRoutine()
 }

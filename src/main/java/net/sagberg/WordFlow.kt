@@ -5,7 +5,6 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.take
 import kotlinx.coroutines.flow.toList
-import kotlinx.coroutines.runBlocking
 
 fun wordsFlow(text: String): Flow<String> = flow {
     // Split the string into words based on spaces
@@ -18,12 +17,10 @@ fun wordsFlow(text: String): Flow<String> = flow {
     }
 }
 
-fun main() {
-    runBlocking {
-        val sentence = "Hello Bekk! Flows are fun and easy."
-        wordsFlow(sentence).collect { word ->
-            println(word)
-        }
-        wordsFlow(sentence).take(3).toList().let { println(it) }
+suspend fun main() {
+    val sentence = "Hello Bekk! Flows are fun and easy."
+    wordsFlow(sentence).collect { word ->
+        println(word)
     }
+    wordsFlow(sentence).take(3).toList().let { println(it) }
 }
