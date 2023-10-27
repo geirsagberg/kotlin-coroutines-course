@@ -8,13 +8,17 @@
 
 ```kotlin
 fun wordsFlow(text: String): Flow<String> = flow {
-    // Split the string into words based on spaces
-    val words = text.split(" ")
+  // Split the string into words based on spaces
+  val words = text.split(" ")
 
-    // Emit each word with a delay
-    for (word in words) {
-        delay(500)
-        emit(word)
-    }
+  // Emit each word with a delay
+  for (word in words) {
+    delay(500)
+    emit(word)
+  }
 }
 ```
+
+[DEMO](../src/main/java/net/sagberg/WordFlow.kt)
+
+[Neste](10-ressurser.md)
