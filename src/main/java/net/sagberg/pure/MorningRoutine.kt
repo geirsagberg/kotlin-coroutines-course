@@ -8,7 +8,7 @@ suspend fun main() {
 }
 
 suspend fun morningRoutine() {
-    val context = EmptyCoroutineContext // Or whatever context you want to use
+    val context = EmptyCoroutineContext
 
     val coffeeBrewing = CompletableDeferred<Coffee>()
     val catPeeing = CompletableDeferred<Unit>()
@@ -30,7 +30,6 @@ suspend fun morningRoutine() {
     startWorkingDay(coffee)
 }
 
-// A very basic implementation of a deferred value, akin to `CompletableFuture` in Java.
 class CompletableDeferred<T> {
     private var result: T? = null
     private var continuation: Continuation<T>? = null
@@ -56,8 +55,6 @@ fun catPeeingCoroutine(result: CompletableDeferred<Unit>): suspend () -> Unit = 
 
 val delayTimer = Timer()
 
-// The delay function takes in the time in milliseconds and a callback that will be executed after the delay,
-// on the dedicated timer thread.
 fun delay(timeMillis: Long, action: () -> Unit) {
     delayTimer.schedule(object : TimerTask() {
         override fun run() {
@@ -67,7 +64,6 @@ fun delay(timeMillis: Long, action: () -> Unit) {
     }, timeMillis)
 }
 
-// Placeholder types and functions
 data object Coffee
 
 fun brushTeeth() {}

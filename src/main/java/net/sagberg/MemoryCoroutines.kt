@@ -1,15 +1,17 @@
 package net.sagberg
 
-import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.joinAll
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 
-suspend fun main() = coroutineScope {
-    (1..10000).map {
-        launch {
-            delay(1000)
-            println("Hello from coroutine $it")
-        }
-    }.joinAll()
+fun main() {
+    runBlocking {
+        (1..10000).map {
+            launch {
+                delay(1000)
+                println("Hello from coroutine $it")
+            }
+        }.joinAll()
+    }
 }
