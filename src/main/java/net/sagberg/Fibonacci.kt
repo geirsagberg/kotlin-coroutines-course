@@ -1,4 +1,4 @@
-package no.vegvesen.vt.nvdb
+package net.sagberg
 
 fun fibonacci(): Sequence<Long> = sequence {
     var pair = Pair(0L, 1L)

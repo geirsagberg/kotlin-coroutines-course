@@ -1,4 +1,4 @@
-package no.vegvesen.vt.nvdb
+package net.sagberg
 
 import kotlinx.coroutines.*
 
@@ -8,6 +8,7 @@ fun main() {
     }
 }
 
+@OptIn(ExperimentalCoroutinesApi::class)
 suspend fun fetchSomeData() {
     withContext(Dispatchers.IO.limitedParallelism(16)) {
         val pageJobs = (1..100).map {

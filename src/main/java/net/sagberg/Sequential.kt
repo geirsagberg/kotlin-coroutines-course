@@ -1,4 +1,4 @@
-package no.vegvesen.vt.nvdb
+package net.sagberg
 
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking

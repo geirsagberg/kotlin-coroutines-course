@@ -1,6 +1,8 @@
-package no.vegvesen.vt.nvdb
+package net.sagberg
 
-import kotlinx.coroutines.*
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 suspend fun main() = coroutineScope {
     val job = launch {

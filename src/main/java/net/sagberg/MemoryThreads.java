@@ -1,4 +1,4 @@
-package no.vegvesen.vt.nvdb;
+package net.sagberg;
 
 public class MemoryThreads {
     public static void main(String[] args) {

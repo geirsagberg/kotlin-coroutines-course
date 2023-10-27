@@ -4,6 +4,6 @@
 - Kan nøstes
 - Alle coroutines kjører i nøyaktig én Context
 
-[DEMO](../src/main/java/no/vegvesen/vt/nvdb/ContextAware.kt)
+[DEMO](../src/main/java/net/sagberg/ContextAware.kt)
 
 [Neste](07b-dispatchers.md)

@@ -1,6 +1,8 @@
-package no.vegvesen.vt.nvdb
+package net.sagberg
 
-import kotlinx.coroutines.*
+import kotlinx.coroutines.async
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.delay
 import kotlin.time.Duration.Companion.seconds
 import kotlin.time.times
 

@@ -1,4 +1,4 @@
-package no.vegvesen.vt.nvdb.pure
+package net.sagberg.pure
 
 import java.util.*
 import kotlin.coroutines.*

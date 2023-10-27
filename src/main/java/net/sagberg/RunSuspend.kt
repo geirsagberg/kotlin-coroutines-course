@@ -1,6 +1,6 @@
 @file:Suppress("PLATFORM_CLASS_MAPPED_TO_KOTLIN")
 
-package no.vegvesen.vt.nvdb
+package net.sagberg
 
 import kotlin.coroutines.Continuation
 import kotlin.coroutines.CoroutineContext

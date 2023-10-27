@@ -1,4 +1,4 @@
-package no.vegvesen.vt.nvdb
+package net.sagberg
 
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
@@ -20,7 +20,7 @@ fun wordsFlow(text: String): Flow<String> = flow {
 
 fun main() {
     runBlocking {
-        val sentence = "Hello NVDB! Flows are fun and easy."
+        val sentence = "Hello Bekk! Flows are fun and easy."
         wordsFlow(sentence).collect { word ->
             println(word)
         }

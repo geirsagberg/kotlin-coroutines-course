@@ -1,4 +1,4 @@
-package no.vegvesen.vt.nvdb
+package net.sagberg
 
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.delay
