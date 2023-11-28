@@ -23,6 +23,7 @@ public class FutureLife {
             System.out.println("Coffee done!");
             return new Coffee();
         });
+
         var catPeeing = CompletableFuture.runAsync(() -> {
             System.out.println("Letting out cat");
             try {
@@ -32,9 +33,12 @@ public class FutureLife {
             }
             System.out.println("Cat wants in");
         });
+
         brushTeeth();
+
         catPeeing.join();
         var coffee = coffeeBrewing.get();
+
         startWorkingDay(coffee);
     }
 }

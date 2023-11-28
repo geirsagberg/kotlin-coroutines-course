@@ -3,7 +3,6 @@
 - Coroutines kjører på en eller flere tråder
 - **Dispatchers** fra `kotlinx.coroutines` håndterer tråder og exception handling
 - En **Dispatcher** er en avansert CoroutineContext
-- `withContext` brukes for å endre CoroutineContext
 
 ## Dispatchers.Default
 

@@ -13,7 +13,6 @@ public class VirtualThreadLife {
     public static void morningRoutine() throws InterruptedException {
         AtomicReference<Coffee> coffee = new AtomicReference<>();
 
-        // Replace with virtual thread
         var coffeeBrewingThread = Thread.startVirtualThread(() -> {
             System.out.println("Brewing coffee");
             try {
@@ -25,7 +24,6 @@ public class VirtualThreadLife {
             coffee.set(new Coffee());
         });
 
-        // Replace with virtual thread
         var catPeeingThread = Thread.startVirtualThread(() -> {
             System.out.println("Letting out cat");
             try {
@@ -37,11 +35,10 @@ public class VirtualThreadLife {
         });
 
         brushTeeth();
+        
         catPeeingThread.join();
         coffeeBrewingThread.join();
+
         startWorkingDay(coffee.get());
     }
-
-    // Other methods like `brushTeeth` and `startWorkingDay` remain the same
-    // Coffee class remains the same
 }

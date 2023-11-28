@@ -12,6 +12,7 @@ public class ThreadLife {
 
     public static void morningRoutine() throws InterruptedException {
         AtomicReference<Coffee> coffee = new AtomicReference<>();
+
         var coffeeBrewingThread = new Thread(() -> {
             System.out.println("Brewing coffee");
             try {
@@ -23,6 +24,7 @@ public class ThreadLife {
             coffee.set(new Coffee());
         });
         coffeeBrewingThread.start();
+
         var catPeeingThread = new Thread(() -> {
             System.out.println("Letting out cat");
             try {
@@ -33,9 +35,12 @@ public class ThreadLife {
             System.out.println("Cat wants in");
         });
         catPeeingThread.start();
+
         brushTeeth();
+
         catPeeingThread.join();
         coffeeBrewingThread.join();
+
         startWorkingDay(coffee.get());
     }
 }
