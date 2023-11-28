@@ -13,4 +13,4 @@ Scenario 2:
 
 - 💬🚴‍♂️🎧 Skrive melding på Slack om at man kommer sent til møte mens man sykler og hører på podcast
 
-[Neste](01c-intro.md)
+[Neste - Hvorfor coroutines?](02-hvorfor.md)

@@ -6,4 +6,4 @@
 - Thread-safe kommunkasjon med **channels**
 - Automatisk oppgavekansellering med **scopes**
 
-[Neste](02b-threads-vs-coroutines.md)
+[Neste - Threads vs. Coroutines](02b-threads-vs-coroutines.md)

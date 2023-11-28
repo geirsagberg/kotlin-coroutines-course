@@ -7,6 +7,6 @@
 **DEMO:**
 
 - [kotlinx.coroutines](../src/main/java/net/sagberg/MorningRoutine.kt)
-- [kotlin.coroutines](../src/main/java/net/sagberg/pure/MorningRoutine.kt)
+- [kotlin.coroutines](../pure-couroutines/src/main/kotlin/MorningRoutine.kt)
 
-[Neste](06b-suspend-fun-main.md)
+[Neste - CoroutineContext](06b-suspend-fun-main.md)

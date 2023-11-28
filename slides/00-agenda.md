@@ -12,4 +12,4 @@
 - Flow
 - Ressurser
 
-[Neste](01-intro.md)
+[Neste - Hvordan gjør man flere ting på én gang?](01-intro.md)

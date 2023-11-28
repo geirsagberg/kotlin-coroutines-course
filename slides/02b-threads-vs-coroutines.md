@@ -18,4 +18,4 @@
 - [10000 threads](../src/main/java/net/sagberg/MemoryThreads.java)
 - [10000 coroutines](../src/main/java/net/sagberg/MemoryCoroutines.kt)
 
-[Neste](03-concurrency-java-threads.md)
+[Neste - Concurrency i Java](03-concurrency-java-threads.md)

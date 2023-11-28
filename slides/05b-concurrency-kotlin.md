@@ -4,23 +4,28 @@
 
 ```java
 public class Work {
-    public CompletableFuture<Report> requestReport() {}
+  public CompletableFuture<Report> requestReport() {
+  }
 
-    public CompletableFuture<Void> sendEmail(Report content) {}
+  public CompletableFuture<Void> sendEmail(Report content) {
+  }
 
-    public CompletableFuture<Pizza> orderPizza() {}
-    
-    public void eatPizza(Pizza pizza) {}
-  
-    public void relax() {} 
+  public CompletableFuture<Pizza> orderPizza() {
+  }
 
-    public void work() {
-        requestReport()
-          .thenCompose(report -> sendEmail(report))
-          .thenCompose(_ -> orderPizza())
-          .thenAccept(pizza -> eatPizza(pizza))
-          .thenRun(() -> relax());
-    }
+  public void eatPizza(Pizza pizza) {
+  }
+
+  public void relax() {
+  }
+
+  public void work() {
+    requestReport()
+      .thenCompose(report -> sendEmail(report))
+      .thenCompose(_ -> orderPizza())
+      .thenAccept(pizza -> eatPizza(pizza))
+      .thenRun(() -> relax());
+  }
 }
 ```
 
@@ -38,11 +43,11 @@ fun eatPizza(pizza: Pizza) {}
 fun relax() {}
 
 suspend fun work() {
-    val report = requestReport()
-    sendEmail(report)
-    val pizza = orderPizza()
-    eatPizza(pizza)
-    relax()
+  val report = requestReport()
+  sendEmail(report)
+  val pizza = orderPizza()
+  eatPizza(pizza)
+  relax()
 }
 ```
 
@@ -52,4 +57,4 @@ suspend fun work() {
 
 ![Suspending icon in gutter](05b-img.png)
 
-[Neste](06-kotlinx.md)
+[Neste - kotlinx.coroutines](06-kotlinx.md)

@@ -9,13 +9,26 @@ class CompletableDeferred<T> {
     private var continuation: Continuation<T>? = null
 
     fun complete(value: T) {
-        continuation?.resume(value) ?: run { result = value }
+        if (continuation != null) {
+            // Someone is already waiting, let's give them the result
+            continuation!!.resume(value)
+        } else {
+            // We are done, save the result until needed
+            result = value
+        }
     }
 
-    suspend fun await(): T {
-        result?.let { return it }
-        return suspendCoroutine { cont ->
-            continuation = cont
+    suspend fun await(): T = when {
+        result != null -> {
+            // We have the result already, serve it up
+            result!!
+        }
+
+        else -> {
+            // We suspend the current function and resume once we have a result
+            suspendCoroutine {
+                continuation = it
+            }
         }
     }
 }

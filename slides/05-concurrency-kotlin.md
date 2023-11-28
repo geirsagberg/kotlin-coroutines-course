@@ -5,21 +5,23 @@
 - `async`: starter en asynkron job, returner en `Deferred<T>` som kan `await()`es
 
 ```kotlin
-suspend fun morningRoutine() {
-    coroutineScope {
-        val coffeeBrewing = async {
-            delay(30.seconds)
-            Coffee
-        }
-        val catPeeing = async {
-            delay(10.seconds + Math.random() * 60.seconds)
-        }
-        brushTeeth()
-        catPeeing.await()
-        val coffee = coffeeBrewing.await()
-        startWorkingDay(coffee)
-    }
+suspend fun morningRoutine() = coroutineScope {
+  val coffeeBrewing = async {
+    println("Brewing coffee...")
+    delay(3.seconds)
+    println("Coffee is ready!")
+    Coffee
+  }
+  val catPeeing = async {
+    println("Letting the cat out...")
+    delay(Math.random() * 6.seconds)
+    println("Meow! *scratch* *scratch*")
+  }
+  brushTeeth()
+  catPeeing.await()
+  val coffee = coffeeBrewing.await()
+  startWorkingDay(coffee)
 }
 ```
 
-[Neste](05b-concurrency-kotlin.md)
+[Neste - Sekvensiell samtidighet](05b-concurrency-kotlin.md)
