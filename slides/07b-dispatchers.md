@@ -47,4 +47,4 @@ suspend fun fetchSomeData() {
 
 [DEMO](../src/main/java/net/sagberg/DispatchersIO.kt)
 
-[Neste](08-sequence.md)
+[Neste - Sequence](08-sequence.md)

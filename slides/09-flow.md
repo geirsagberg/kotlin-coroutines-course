@@ -21,4 +21,4 @@ fun wordsFlow(text: String): Flow<String> = flow {
 
 [DEMO](../src/main/java/net/sagberg/WordFlow.kt)
 
-[Neste](10-ressurser.md)
+[Neste - Ressurser](10-ressurser.md)

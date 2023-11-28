@@ -22,4 +22,4 @@ fun main() {
 
 [DEMO](../src/main/java/net/sagberg/Fibonacci.kt)
 
-[Neste](09-flow.md)
+[Neste - Flow](09-flow.md)

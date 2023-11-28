@@ -24,4 +24,6 @@ suspend fun morningRoutine() = coroutineScope {
 }
 ```
 
+[DEMO](../src/main/java/net/sagberg/MorningRoutine.kt)
+
 [Neste - Sekvensiell samtidighet](05b-concurrency-kotlin.md)
