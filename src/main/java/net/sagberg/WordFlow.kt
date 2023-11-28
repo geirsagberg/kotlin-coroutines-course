@@ -18,9 +18,9 @@ fun wordsFlow(text: String): Flow<String> = flow {
 }
 
 suspend fun main() {
-    val sentence = "Hello Bekk! Flows are fun and easy."
+    val sentence = "Hello JavaBin! Flows are fun and easy."
     wordsFlow(sentence).collect { word ->
         println(word)
     }
-    wordsFlow(sentence).take(3).toList().let { println(it) }
+    wordsFlow(sentence).take(5).toList().let { println(it) }
 }

@@ -6,4 +6,4 @@
 
 [DEMO uten kotlinx](../pure-couroutines/src/main/kotlin/MorningRoutine.kt)
 
-[Neste - CoroutineContext](06b-suspend-fun-main.md)
+[Neste - CoroutineContext](07-context.md)
